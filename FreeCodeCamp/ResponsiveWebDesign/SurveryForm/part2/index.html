@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+    
+        <header class="header">
+            <h1 id="title" name="title">Dota 2 Survey Form</h1>
+            <p id="description" name="description">Thank you for sharing your time with us.</p>
+        </header>
+        
+        <form id="survey-form">
+
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" required placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Number</label>
+                <input type="number" name="number" id="number" required placeholder="Enter your age" min="18" max="100">
+            </div>
+            <div class="form-group">
+                <label for="dropdown">
+                    <select name="dropdown" id="dropdown" required></select>
+                    <option disabled>Select your rank</option>
+                    <option value="herald">Herald</option>
+                    <option value="guardian">Guardian</option>
+                    <option value="crusader">Crusader</option>
+                    <option value="archon">Archon</option>
+                    <option value="legend">Legend</option>
+                    <option value="ancient">Ancient</option>
+                    <option value="divine">Divine</option>
+                    <option value="immortal">Immortal</option>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="role-form">What is your position?
+                    <label for="midlane" class="roles">Midlane
+                        <input id="midlane" name="midlane"  type="radio" value="pos2">
+                    </label>
+                    <label for="safelane" class="roles">Safelane
+                        <input id="safelane" name="safelane"  type="radio" value="pos1">
+                    </label>
+                    <label for="offlane" class="roles">Offlane
+                        <input id="offlane" name="offlane"  type="radio" value="pos3">
+                    </label>
+                    <label for="support" class="roles">Support
+                        <input id="support" name="support"  type="radio" value="pos4">
+                    </label>
+                    <label for="hardsupport" class="roles">Hard Support
+                        <input id="hardsupport" name="hardsupport"  type="radio" value="pos5">
+                    </label>
+                </label>
+            <div class="form-group">
+                <label for="comment">What is your comment in DOTA 2?
+                    <textarea name="comment" id="comment"></textarea>
+                </label>
+            </div>
+            <div class="form-group">
+                <button id="submit" value="Submit" name="submit">Submit</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    
+</body>
+</html>
