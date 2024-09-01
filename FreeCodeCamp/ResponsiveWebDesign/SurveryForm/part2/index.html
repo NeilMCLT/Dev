@@ -17,15 +17,15 @@
         <form id="survey-form">
             <div class="form-group">
                 <label id="name-label" for="name">Name</label>
-                <input type="text" name="name" id="name" required placeholder="Enter your name">
+                <input class="form-control" type="text" name="name" id="name" required placeholder="Enter your name">
             </div>
             <div class="form-group">
                 <label id="email-label" for="email">Email</label>
-                <input type="email" name="email" id="email" required placeholder="Enter your email">
+                <input class="form-control" type="email" name="email" id="email" required placeholder="Enter your email">
             </div>
             <div class="form-group">
                 <label id="number-label" for="number">Number</label>
-                <input type="number" name="number" id="number" required placeholder="Enter your age" min="18" max="100">
+                <input class="form-control" type="number" name="number" id="number" required placeholder="Enter your age" min="18" max="100">
             </div>
             <div class="form-group">
                 <label for="dropdown">Select your rank:</label>
@@ -43,25 +43,25 @@
             </div>
             <div class="form-group">
                 <label class="role-form">What is your position?</label>
-                <label for="midlane" class="roles">Midlane
-                    <input id="midlane" name="position" type="radio" value="pos2">
+                <label for="midlane" class="roles">
+                    <input class="input-roles"  id="midlane" name="position" type="radio" value="pos2">Midlane
                 </label>
-                <label for="safelane" class="roles">Safelane
-                    <input id="safelane" name="position" type="radio" value="pos1">
+                <label for="safelane" class="roles">
+                    <input class="input-roles" id="safelane" name="position" type="radio" value="pos1">Safelane
                 </label>
-                <label for="offlane" class="roles">Offlane
-                    <input id="offlane" name="position" type="radio" value="pos3">
+                <label for="offlane" class="roles">
+                    <input class="input-roles" id="offlane" name="position" type="radio" value="pos3">Offlane
                 </label>
-                <label for="support" class="roles">Support
-                    <input id="support" name="position" type="radio" value="pos4">
+                <label for="support" class="roles">
+                    <input class="input-roles" id="support" name="position" type="radio" value="pos4">Support
                 </label>
-                <label for="hardsupport" class="roles">Hard Support
-                    <input id="hardsupport" name="position" type="radio" value="pos5">
+                <label for="hardsupport" class="roles">
+                    <input class="input-roles" id="hardsupport" name="position" type="radio" value="pos5">Hard Support
                 </label>
             </div>
             <div class="form-group">
                 <label for="comment">What is your comment on DOTA 2?</label>
-                <textarea name="comment" id="comment"></textarea>
+                <textarea class="form-control" name="comment" id="comment"></textarea>
             </div>
             <div class="form-group">
                 <button id="submit" type="submit" value="Submit" name="submit">Submit</button>
