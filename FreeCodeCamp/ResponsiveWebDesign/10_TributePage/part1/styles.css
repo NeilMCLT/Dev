@@ -1,0 +1,69 @@
+/* Apply a reset to remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the main container */
+#main {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the title */
+#title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Styling for the image and caption */
+#img-div {
+    text-align: center;
+    margin: 20px;
+}
+
+#image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+#img-caption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #777;
+}
+
+/* Styling for tribute information */
+#tribute-info {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+/* Styling for the tribute link */
+#tribute-link {
+    text-decoration: none;
+    color: #0078d4;
+    font-weight: bold;
+}
+
+/* Styling for the link on hover */
+#tribute-link:hover {
+    text-decoration: underline;
+}
