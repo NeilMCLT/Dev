@@ -10,9 +10,10 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 50px;
+    padding: 1.5rem ;
     text-align: left;
     z-index: 1000;
+    background: rgba(22, 22, 22, 0.7);
 }
 
 header nav ul{
@@ -52,6 +53,7 @@ header nav ul li:last-child::after{
     flex-direction: column;
     justify-content: center;
     justify-items: center;
+    background-attachment: scroll;
     
 }
 
@@ -80,12 +82,14 @@ p{
     font-weight: 300;
 }
 
-#s-timeline{
+#s-timeline {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(bg2.png);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
     display: flex;
     flex-direction: column;
     justify-items: flex-start;
@@ -96,7 +100,7 @@ h2{
     margin: 10rem auto 0 auto;
 }
 
-.timeline{
+#timeline{
     
     margin: 1rem auto 5rem auto;
     max-width: 34.15em;
@@ -155,7 +159,7 @@ h2{
 .checkpoint:nth-child(even) div::before {
     content: '';
     background: #fff;
-    box-shadow: 0 0 0.5em #0d71fc;
+    box-shadow: 0 0 0.5em #fff;
     width: 0.8em;
     height: 0.8em;
     position: absolute;
@@ -175,4 +179,65 @@ h2{
 .checkpoint h3{
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+#s-quotes{
+    width: 100%;
+    height: 100vh;
+    background-image: url(bg3.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#s-quotes div{
+    text-align: center;
+    margin: 20rem;
+    color: white;
+    
+}
+
+#s-quotes div p{
+    margin: 12rem 7rem 1rem 7rem;
+    font-size: 1rem;
+    text-shadow: black;
+    
+}
+
+#s-quotes div h3{
+    font-size: 1rem;
+    margin-right: 20rem;
+}
+
+.div-footer{
+    width: 100%;
+    display: inline-flex;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.link a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    flex: 0 1 auto;
+}
+
+img{
+    padding-left: 0.2rem;
+    padding-bottom: 0.3rem;
+    margin: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+.design{
+    padding: 0;
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+
 }
