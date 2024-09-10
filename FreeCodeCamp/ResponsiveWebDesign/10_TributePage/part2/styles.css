@@ -3,6 +3,7 @@ body{
     background-color: black;
     color: white;
     margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 header{
@@ -21,14 +22,27 @@ header nav ul{
 }
 
 header nav ul li{
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
     color: white;
     font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
     
 }
 
-#home{
+header nav ul li:not(:last-child)::after{
+    content: "|";
+    color: white;
+    margin-left: 30px;
+}
+
+header nav ul li:last-child::after{
+    content: "";
+}
+
+#s-home{
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -38,4 +52,127 @@ header nav ul li{
     flex-direction: column;
     justify-content: center;
     justify-items: center;
+    
+}
+
+.div-info{
+    text-align: center;
+    width: 50%;
+    margin: 0 20px;
+    padding: 0 20px;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+h3{
+    font-size: 20px;
+    margin: 2px 0;
+    font-weight: 300;
+}
+
+p{
+    margin: 10px 0;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#s-timeline{
+    width: 100%;
+    height: 100vh;
+    background-image: url(bg2.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+h2{
+    text-align: center;
+    margin: 10rem auto 0 auto;
+}
+
+.timeline{
+    
+    margin: 1rem auto 5rem auto;
+    max-width: 34.15em;
+}
+
+.checkpoint{
+    max-width: 34em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+}
+
+.checkpoint div{
+    border: 2px solid #888;
+    border-radius: 0.5em;
+    padding: 1.5em;
+}
+
+.checkpoint p{
+    line-height: 27px;
+    color: #ccc;
+}
+
+.checkpoint:nth-child(odd){
+    border-left: 3px solid #888;
+    padding: 3em;
+    transform: translateX(17em);
+}
+
+.checkpoint:nth-child(even){
+    border-right: 3px solid #888;
+    padding: 3em;
+    transform: translateX(-17em)
+}
+
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before {
+    content: '';
+    background: #888;
+    width: 3em;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkpoint:nth-child(odd)::before{
+    left: 0;
+}
+
+.checkpoint:nth-child(even)::before{
+    right: 0;
+}
+
+.checkpoint:nth-child(odd) div::before,
+.checkpoint:nth-child(even) div::before {
+    content: '';
+    background: #fff;
+    box-shadow: 0 0 0.5em #0d71fc;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.checkpoint:nth-child(odd) div::before{
+    left: -0.5em;
+}
+
+.checkpoint:nth-child(even) div::before{
+    right: -0.5em;
+}
+
+.checkpoint h3{
+    font-size: 1.5rem;
+    font-weight: 600;
 }
