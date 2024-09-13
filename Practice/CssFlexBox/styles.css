@@ -1,3 +1,22 @@
 body{
     font-family: sans-serif;
+    background-color: white;
+    width: 100%;
+}
+
+#main{
+    width: 50%;
+    height: 100vh;
+    background-color: #FDEAEC;
+    margin: 0 auto;
+    padding: 10px 40px;
+}
+
+h1{
+    width: 100%;
+    text-align: left;
+    color: #BA221D;
+    font-size: 2rem;
+    font-weight: 900;
+    
 }
