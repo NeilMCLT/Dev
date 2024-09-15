@@ -1,58 +1,68 @@
 body{
     font-family: sans-serif;
     background-color: white;
-    width: 100%;
 }
 
 #main{
-    width: 50%;
     background-color: #FDEAEC;
     margin: 0 auto;
     padding: 10px 40px;
-    display: flex;
-    flex-direction: column;
 }
 
 h1{
-    width: 100%;
     text-align: left;
     color: #BA221D;
     font-size: 2rem;
     font-weight: 900;
 }
 
-#horizontal-layout{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 h2{
-    width: 100%;
-    display: block;
+    margin: auto;
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
-#flex-direction{
-    width: 100%;
+h3{
+    margin: 0;
+    padding: 0;
 }
 
 .rectangle-box{
     width: 100%;
-    display: block;
+    margin: auto;
+    display: flex;
     flex-direction: row;
+    align-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .div-rd-box{
     display: inline;
     margin: 1rem;
+    flex-wrap: wrap;
 }
 
 .fd-small-box{
-    height: 7rem;
-    width: 8rem;
+    height: 14em;
+    width: 18rem;
     padding: 0;
     margin: 0.1rem;
-    border: 2px solid black;
+    border: 0.2rem solid black;
+    border-radius: .5rem;
+    display: grid;
+    flex-wrap: wrap;
+    padding: .5rem;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.pink-box{
+    background-color: #E01C48;
+    height: 3rem;
+    width: 3rem;
+    margin: 0.1rem;
+    
 }
