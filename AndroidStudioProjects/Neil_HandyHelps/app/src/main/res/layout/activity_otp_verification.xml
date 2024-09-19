@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@android:color/white"
+    tools:context=".OTPVerification">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_enter_otp" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTP Verification"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Instruction -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter the One-Time Password (OTP) sent to your registered email address to verify your identity."
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- OTP TextInput -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/otp"
+            android:hint="Enter OTP"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btnVerifyOTP"
+        android:text="Verify OTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

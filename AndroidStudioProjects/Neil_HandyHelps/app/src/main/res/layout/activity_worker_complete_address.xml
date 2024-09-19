@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Worker_CompleteAddress">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Complete Address"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <!-- Instruction -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please provide your complete address details."
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Address Line 1 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutAddressline1"
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addressline1"
+                android:layout_width="match_parent"
+                android:hint="Address line"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_clear_text"
+                android:focusable="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Address Line 2 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutAddressline2"
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addressline2"
+                android:layout_width="match_parent"
+                android:hint="Address line 2 (optional)"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Barangay -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutBarangay"
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/barangay"
+                android:layout_width="match_parent"
+                android:hint="Barangay"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Longitude (Hidden) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutLongitude"
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/longitude"
+                android:layout_width="match_parent"
+                android:hint="Longitude"
+                android:inputType="numberDecimal"
+                android:layout_height="wrap_content"
+                android:focusable="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Latitude (Hidden) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutLatitude"
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/latitude"
+                android:layout_width="match_parent"
+                android:hint="Latitude"
+                android:inputType="numberDecimal"
+                android:layout_height="wrap_content"
+                android:focusable="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Use Current Location Button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right">
+
+            <Button
+                android:id="@+id/currentloc"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_myloc"
+                android:text="Use Current Location"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp" />
+
+        </LinearLayout>
+
+        <!-- Error Message -->
+        <TextView
+            android:id="@+id/error"
+            android:layout_marginBottom="20dp"
+            android:text="Error while logging in"
+            android:textColor="#F44336"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Loading ProgressBar -->
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/Submit"
+            android:text="Submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="hhblue">#255ED6</color>
+    <color name="hhlblue">#167EE6</color>
+    <color name="hhlred">#FD7468</color>
+    <color name="hhwhite">#F5F5F5</color>
+    <color name="green">#44FF44</color>
+    <color name="red">#FF2525</color>
+    <color name="default_border_color">#616161</color>
+    <color name="gray">#515151</color>
+    <color name="outlineColor">#616161</color>
+
+</resources>

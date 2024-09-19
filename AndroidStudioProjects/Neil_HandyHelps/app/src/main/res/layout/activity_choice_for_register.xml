@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChoiceForRegister"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_choose" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_as_a"
+        android:textSize="50sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <!-- Instruction -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/this_will_provide_you_a_specific_registration_form"
+        android:textSize="13sp"
+        android:layout_marginBottom="20dp">
+
+    </TextView>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- Homeowner Button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/Homeowner"
+                android:text="@string/homeowner"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp">
+
+            </Button>
+        </LinearLayout>
+
+        <!-- Worker Button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/Worker"
+                android:text="@string/worker"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

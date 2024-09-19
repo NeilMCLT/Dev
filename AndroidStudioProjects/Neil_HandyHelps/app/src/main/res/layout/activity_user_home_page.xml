@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#F6F6F6"
+    tools:context=".User_HomePage">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FEFEFE"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="430dp"
+                    android:layout_height="413dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_welcome"
+                    android:layout_marginBottom="20dp"/>
+
+                <TextView
+                    android:id="@+id/id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="10dp"
+                    android:text="@string/id"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/name"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/email"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/phone"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/address"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/fetchResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/fetchProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fetch_user"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="250dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Categories"
+                        android:textSize="25dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:columnCount="3"
+                        android:rowCount="3">
+
+                        <androidx.cardview.widget.CardView
+
+                            android:id="@+id/Plumber"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_row="0"
+                            android:layout_rowWeight="1"
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_plumbing" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Plumber"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/Housecleaner"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_row="0"
+                            android:layout_rowWeight="1"
+                            android:layout_column="1"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_house_cleaning" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="House cleaner"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/Electrician"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_row="0"
+                            android:layout_rowWeight="1"
+                            android:layout_column="2"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_electrical_services" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Electrician"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/Carpenter"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_row="1"
+                            android:layout_rowWeight="1"
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_carpentry" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Carpenter"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/Laundryservice"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_row="1"
+                            android:layout_rowWeight="1"
+                            android:layout_column="1"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_laundry_service" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Laundry service"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/Repairman"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_row="1"
+                            android:layout_rowWeight="1"
+                            android:layout_column="2"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_repair_service" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Repair man"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </GridLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="100dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Best Workers in the community"
+                        android:textSize="20dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:columnCount="3"
+                        android:rowCount="3">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/BW1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_row="0"
+                            android:layout_rowWeight="1"
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/BK1name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/BK1pic"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_person"
+                                    app:civ_border_color="@color/default_border_color"
+                                    app:civ_border_width="3dp" />
+
+                                <TextView
+                                    android:id="@+id/BK1work"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:text="Work"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/BK1loc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address"
+                                    android:textAlignment="center" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/BW2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_row="0"
+                            android:layout_rowWeight="1"
+                            android:layout_column="1"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/BK2name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_person"
+                                    app:civ_border_color="@color/default_border_color"
+                                    app:civ_border_width="3dp" />
+
+                                <TextView
+                                    android:id="@+id/BK2work"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:text="Work"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/BK2loc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address"
+                                    android:textAlignment="center" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/BW3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_row="1"
+                            android:layout_rowWeight="1"
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/BK3name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_person"
+                                    app:civ_border_color="@color/default_border_color"
+                                    app:civ_border_width="3dp" />
+
+                                <TextView
+                                    android:id="@+id/BK3work"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:text="Work"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/BK3loc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address"
+                                    android:textAlignment="center" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/BW4"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_row="1"
+                            android:layout_rowWeight="1"
+                            android:layout_column="1"
+                            android:layout_columnWeight="1"
+                            android:layout_gravity="fill"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/BK4name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_person"
+                                    app:civ_border_color="@color/default_border_color"
+                                    app:civ_border_width="3dp" />
+
+                                <TextView
+                                    android:id="@+id/BK4work"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:text="Work"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/BK4loc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address"
+                                    android:textAlignment="center" />
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </GridLayout>
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/logout" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="414dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@drawable/bottom_background"
+        app:itemIconSize="35dp"
+        app:itemIconTint="@drawable/item_selector"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

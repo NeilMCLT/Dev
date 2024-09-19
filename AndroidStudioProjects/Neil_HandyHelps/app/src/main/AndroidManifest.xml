@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Neil_HandyHelps"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".User_Message"
+            android:exported="false" />
+        <activity
+            android:name=".User_Profile"
+            android:exported="false" />
+        <activity
+            android:name=".User_HomePage"
+            android:exported="false" />
+        <activity
+            android:name=".Worker_HomePage"
+            android:exported="false" />
+        <activity
+            android:name=".Worker_FlashScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Worker_WorkDetails"
+            android:exported="false" />
+        <activity
+            android:name=".Worker_ChooseYourWork"
+            android:exported="false" />
+        <activity
+            android:name=".Worker_CompleteAddress"
+            android:exported="false" />
+        <activity
+            android:name=".Worker_Registration"
+            android:exported="false" />
+        <activity
+            android:name=".CompleteAddress"
+            android:exported="false" />
+        <activity
+            android:name=".ChoiceForRegister"
+            android:exported="false" />
+        <activity
+            android:name=".OTPVerification"
+            android:exported="false" />
+        <activity
+            android:name=".NewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ResetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Registration"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
