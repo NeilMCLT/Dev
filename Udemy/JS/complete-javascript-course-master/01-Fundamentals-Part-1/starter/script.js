@@ -72,7 +72,7 @@ console.log(x, y);
 const averageAge = (ageNeil + ageBea) / 2;
 console.log(averageAge);
 
-*/
+
 
 const firstName = "Neil Joshua";
 const middleName = "P.";
@@ -101,3 +101,26 @@ to
 use
 multiple
 lines.`);
+
+
+
+// If else
+const myName = "Neil";
+let age = "16";
+let yearsLeft = 18 - age;
+let years;
+
+if (yearsLeft >= 2) {
+    years = "years"
+} else {
+    years = "year"
+}
+
+if (age >= 18) {
+    console.log(`Hi ${myName}, you are valid to have a driving license.`)
+
+} else {
+    console.log(`We're sorry ${myName}, but you have still ${yearsLeft} ${years} to be vilid on having a driver's license.`);
+}
+
+*/
