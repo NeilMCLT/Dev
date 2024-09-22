@@ -123,4 +123,68 @@ if (age >= 18) {
     console.log(`We're sorry ${myName}, but you have still ${yearsLeft} ${years} to be vilid on having a driver's license.`);
 }
 
+
+
+let yearNow = "1400";
+
+if (yearNow >= 2000) {
+    console.log('20 Century');
+} else if (yearNow >= 1900) {
+    console.log('19 Century');
+} else if (yearNow >= 1800) {
+    console.log('18 Century');
+} else if (yearNow >= 1700) {
+    console.log('17 Century');
+} else if (yearNow >= 1600) {
+    console.log('16 Century');
+} else if (yearNow >= 1500) {
+    console.log('15 Century');
+} else if (yearNow >= 1400) {
+    console.log('14 Century');
+} else if (yearNow <= 1399) {
+    console.log('Below 13 Century is Invalid');
+}
+
+
+// Type Conversion
+const inputYear = "2024"; // The input year is a String
+
+console.log(inputYear + 1); // 2024(string) + 1 = 2025
+console.log(Number(inputYear) + 1); // I change the data type to number
+console.log(String(24), 24);
+
+// Type Coercion
+console.log('I am ' + 23 + ' years old');
+console.log('23' + '10' + 3);
+console.log('23' - '10' - 3);
+console.log('23' * '2');
+console.log('23' / '2');
+
+let n = '1' + 1; // 11
+n = n - 1; // 10
+console.log(n);
+
 */
+
+//Truely and Falsy
+//There are 5 Falsy values = 0, '', undefined, null, NaN. 
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Jonas"));
+console.log(Boolean({}));
+console.log(Boolean(""));
+
+const money = 0;
+if (money) {
+    console.log("Dont spend it all");
+} else {
+    console.log("GET A JOB!");
+}
+
+let height;
+if (height) {
+    console.log("height is defined");
+} else {
+    console.log("height is undefined");
+}
