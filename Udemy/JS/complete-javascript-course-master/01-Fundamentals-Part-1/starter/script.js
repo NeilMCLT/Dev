@@ -164,10 +164,10 @@ let n = '1' + 1; // 11
 n = n - 1; // 10
 console.log(n);
 
-*/
+
 
 //Truely and Falsy
-//There are 5 Falsy values = 0, '', undefined, null, NaN. 
+//There are 5 Falsy values = 0, '', undefined, null, NaN.
 
 console.log(Boolean(0));
 console.log(Boolean(undefined));
@@ -187,4 +187,39 @@ if (height) {
     console.log("height is defined");
 } else {
     console.log("height is undefined");
+}
+
+
+
+//Equality operator == vs ===
+
+let age = '23';
+
+if (age == 23) console.log("You are 23. (loose)");
+if (age === 23) console.log("You are 23. (strict)");
+
+const yourNumber = prompt("What is your favorite number?") // The number will you input to the prompt will be string.
+
+if (yourNumber == "23") {
+    console.log(yourNumber, typeof yourNumber);
+}
+
+const yourNumber2 = Number(prompt("What is your favorite number?"))  // This is the best way to make the input number into a number data type
+
+if (yourNumber2 === 23) {
+    console.log(yourNumber2, typeof yourNumber2);
+}
+
+*/
+
+let answer = prompt(`What is the name of Neil's girlfriend?
+    A. Beatrice
+    B. Allaine`);
+
+if (answer == "B") {
+    console.log("You got it right! Beatrice, is the correct answer!");
+} else if (answer == "A") {
+    console.log("You got it right! Allaine, is the correct answer!");
+} else {
+    console.log("A and B are just both correct, but still you did not choose from two? NOOB!");
 }
