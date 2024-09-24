@@ -210,7 +210,6 @@ if (yourNumber2 === 23) {
     console.log(yourNumber2, typeof yourNumber2);
 }
 
-*/
 
 let answer = prompt(`What is the name of Neil's girlfriend?
     A. Beatrice
@@ -223,3 +222,82 @@ if (answer == "B") {
 } else {
     console.log("A and B are just both correct, but still you did not choose from two? NOOB!");
 }
+
+//Logical Operators
+
+const hasDriversLicense = true;
+const hasGoodVision = false;
+
+console.log(hasDriversLicense && hasGoodVision); // AND operator
+console.log(hasDriversLicense || hasGoodVision); // OR operator
+console.log(!hasDriversLicense); // NOT operator
+
+if (hasDriversLicense && hasGoodVision) {
+    console.log("Neil is able to drive");
+} else {
+    console.log("We need someone to drive");
+}
+
+
+
+// Switch statement
+const day = 'sundays';
+
+switch (day) {
+    case 'monday':
+        console.log('Learning new Technology');
+        break;
+    case 'tuesday':
+        console.log('Practicing the new technology');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Implementing the new technology');
+        break;
+    case 'friday':
+        console.log('Finalizing the implemented technology');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend');
+        break;
+    default:
+        console.log('Invalid day');
+}
+
+*/
+
+//CHALLANGE: I will make this transform this swicth statement using if else statement. hehe
+
+let whatDay = prompt('What should I do in?');
+let theDayInput;
+
+if (whatDay === 'Wednesday' || whatDay === 'wednesday') {
+    theDayInput = 'thursday';
+} else if (whatDay === 'Thursday' || whatDay === 'thursday') {
+    theDayInput = 'wednesday'
+}
+
+if (whatDay === 'Monday' || whatDay === 'monday') {
+    console.log('Learning new Technology');
+
+} else if (whatDay === 'Tuesday' || whatDay === 'tuesday') {
+
+    console.log('Practicing the new technology');
+
+} else if (whatDay === 'Wednesday' || whatDay === 'wednesday' || whatDay === 'Thursday' || whatDay === 'thursday') {
+
+    console.log(`Implementing the new technology, just like ${theDayInput}!`);
+
+} else if (whatDay === 'Friday' || whatDay === 'friday') {
+
+    console.log('Finalizing the implemented technology');
+
+} else if (whatDay === 'Saturday' || whatDay === 'saturday' || whatDay === 'Sunday' || whatDay === 'sunday') {
+
+    console.log('Enjoy the weekend!');
+
+} else {
+    alert('Try again! You must pick a day.');
+}
+
