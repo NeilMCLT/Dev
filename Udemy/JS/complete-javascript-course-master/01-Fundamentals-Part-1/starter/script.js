@@ -265,7 +265,7 @@ switch (day) {
         console.log('Invalid day');
 }
 
-*/
+
 
 //CHALLANGE: I will make this transform this swicth statement using if else statement. hehe
 
@@ -300,4 +300,28 @@ if (whatDay === 'Monday' || whatDay === 'monday') {
 } else {
     alert('Try again! You must pick a day.');
 }
+
+
+
+// Ternary Conditional Operator
+const age = 23;
+
+age >= 18 ? console.log('I like to drink wine') :
+    console.log('I like to drink water');
+
+const drink = age >= 18 ? 'Wine' : 'water';
+console.log(drink);
+
+let drink2;
+
+if (age >= 18) {
+    drink2 = 'WINE';
+} else {
+    drink2 = 'WATER';
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? 'WINE🍷' : 'WATER💦'}`);
+
+*/
 
