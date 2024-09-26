@@ -16,4 +16,6 @@ console.log(continent);
 console.log(population);
 console.log(language);
 console.log(birthDate);
+
+
 */
