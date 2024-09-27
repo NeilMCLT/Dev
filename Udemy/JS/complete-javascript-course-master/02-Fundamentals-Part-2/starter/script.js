@@ -76,6 +76,8 @@ function calAge1(birthyear) {
 
 console.log(calAge1(2001));
 
+
+
 //Function Expression
 
 const calAge2 = function (birthyear) {
@@ -84,7 +86,7 @@ const calAge2 = function (birthyear) {
 
 console.log(calAge2(2001));
 
-*/
+
 
 //Arrow Function
 
@@ -100,3 +102,29 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(2001, 'Neil'));
 
+
+
+// I try on my own
+const currentAge = function (birthYear, firstName, lastName) {
+    let age = 2024 - birthYear;
+    let result = age >= 18 ? 'valid' : 'invalid';
+    let yearWord = age >= 2 ? 'years' : 'year';
+    let sentence = `Hi ${firstName} ${lastName}, you are ${result} bacause you are ${age} ${yearWord} old`
+    return (sentence);
+}
+
+console.log(currentAge(2023, 'Neil', 'Miclat'));
+
+*/
+const fruitPieces = function (fruit) {
+    return fruit * 4;
+}
+
+const fruitProcessor = function (apples, oranges) {
+    let cuttedApples = fruitPieces(apples);
+    let cuttedOranges = fruitPieces(oranges);
+    const juice = `Juice with ${cuttedApples} apples and ${cuttedOranges} oranges`;
+    return juice;
+}
+
+console.log(fruitProcessor(1, 2));
