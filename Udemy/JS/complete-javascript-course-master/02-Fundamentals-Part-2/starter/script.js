@@ -115,7 +115,7 @@ const currentAge = function (birthYear, firstName, lastName) {
 
 console.log(currentAge(2023, 'Neil', 'Miclat'));
 
-*/
+
 const fruitPieces = function (fruit) {
     return fruit * 4;
 }
@@ -128,3 +128,27 @@ const fruitProcessor = function (apples, oranges) {
 }
 
 console.log(fruitProcessor(1, 2));
+
+
+*/
+
+const myAge = function (myBirthYear) {
+    return 2024 - myBirthYear;
+}
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+    const age = myAge(birthYear);
+    const retirement = 60 - age;
+
+    if (retirement > 0) {
+        console.log(`${firstName} has ${retirement} years to retire.`);
+        return retirement;
+    } else {
+        console.log(`${firstName} is already retired.`);
+        return -1;
+    }
+
+}
+
+yearsUntilRetirement(2001, "Neil");
+yearsUntilRetirement(1930, "pogi");
