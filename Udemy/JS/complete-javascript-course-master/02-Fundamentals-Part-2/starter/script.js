@@ -154,3 +154,45 @@ yearsUntilRetirement(2001, "Neil");
 yearsUntilRetirement(1930, "pogi");
 
 */
+
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends);
+
+const year = new Array(2001, 2002, 2003, 2004);
+console.log(year);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = 'Neil';
+console.log(friends);
+
+
+const firstName = 'Neil'
+
+const neil = [firstName, 'Miclat', 2024 - 2001, 'Programmer', friends]
+console.log(neil);
+
+// Exercise
+
+const calAge = function (birthYear) {
+    return 2024 - birthYear;
+}
+
+const years = [2001, 2002, 2003, 2004];
+
+const age1 = calAge(years[0]);
+const age2 = calAge(years[1]);
+const age3 = calAge(years[years.length - 1]);
+
+console.log(age1, age2, age3);
+
+const ages = [calAge(years[0]), calAge(years[1]), calAge(years[years.length - 1])];
+console.log(ages);
+
+const agess = year.map(calAge);
+
+console.log(agess);
