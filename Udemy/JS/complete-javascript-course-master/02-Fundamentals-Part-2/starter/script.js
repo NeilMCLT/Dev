@@ -196,3 +196,51 @@ console.log(ages);
 const agess = year.map(calAge);
 
 console.log(agess);
+
+
+
+
+
+
+
+
+const myOrder = function (howManyApples, howManyOranges) {
+
+    const wantApple = prompt('Do you like apple?');
+    const wantOrange = prompt('Do you like orange?');
+
+    if (wantApple == 'Yes' || wantApple == 'yes') {
+        howManyApples = prompt('How many apples?');
+    } else {
+        howManyApples = 0
+    }
+
+    if (wantOrange == 'Yes' || wantOrange == 'yes') {
+        howManyOranges = prompt('How many oranges?');
+    } else {
+        howManyOranges = 0
+    }
+
+    return fruitProcessor(howManyApples, howManyOranges);
+}
+
+const fruitProcessor = function (apples, oranges) {
+
+    let appleWord, orangeWord;
+    if (apples <= 1) {
+        appleWord = 'apple';
+    } else {
+        appleWord = 'apples';
+    }
+
+    if (oranges <= 1) {
+        orangeWord = 'orange';
+    } else {
+        orangeWord = 'oranges';
+    }
+
+    const myFruit = alert(`You have ordered ${apples} ${appleWord} and ${oranges} ${orangeWord}. Thank you!`);
+    return myFruit;
+}
+
+myOrder();
