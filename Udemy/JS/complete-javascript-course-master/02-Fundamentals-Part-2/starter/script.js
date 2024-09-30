@@ -153,7 +153,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 yearsUntilRetirement(2001, "Neil");
 yearsUntilRetirement(1930, "pogi");
 
-*/
+
 
 const friends = ['Michael', 'Steven', 'Peter'];
 console.log(friends);
@@ -197,12 +197,7 @@ const agess = year.map(calAge);
 
 console.log(agess);
 
-
-
-
-
-
-
+// I just want to recall the use of function
 
 const myOrder = function (howManyApples, howManyOranges) {
 
@@ -244,3 +239,32 @@ const fruitProcessor = function (apples, oranges) {
 }
 
 myOrder();
+*/
+
+// Basic Operations in Array
+
+const friends = ['Michael', 'Steven', 'Peter'];
+
+// Add Elements in Array
+friends.push('Jay');
+console.log(friends);
+
+friends.unshift('John');
+console.log(friends);
+
+// Remove Array
+friends.pop(); //It will remove the last part of the Array
+console.log(friends);
+
+friends.shift(); //It will remove the first part
+console.log(friends);
+
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Bob'));
+
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Bob'));
+
+if (friends.includes('Steven')) {
+    console.log('You have a friend called Steven');
+}
