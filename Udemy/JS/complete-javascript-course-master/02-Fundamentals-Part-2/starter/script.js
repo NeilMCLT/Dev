@@ -239,7 +239,7 @@ const fruitProcessor = function (apples, oranges) {
 }
 
 myOrder();
-*/
+
 
 // Basic Operations in Array
 
@@ -268,3 +268,81 @@ console.log(friends.includes('Bob'));
 if (friends.includes('Steven')) {
     console.log('You have a friend called Steven');
 }
+
+*/
+
+// Object
+
+const neil = {
+    firstName: 'Neil',
+    lastName: 'Miclat',
+    birthYear: 2001,
+    job: 'Full Stack Developer',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+
+    // clacAge: function (birthYear) {
+    //     return 2024 - birthYear;
+    // }
+
+    // clacAge: function () {
+    //     return 2024 - this.birthYear;
+    // }
+
+    clacAge: function () {
+        this.age = 2024 - this.birthYear;
+        return this.age;
+    },
+
+    calcDL: function () {
+        if (this.hasDriversLicense) {
+            this.resultForDL = `He has a driver's license.`
+        } else {
+            this.resultForDL = `He don't have a driver's license.`
+        }
+
+        return this.resultForDL;
+    }
+
+
+};
+
+
+
+// Dots vs Brackets
+
+// console.log(neil);
+
+// console.log(neil.lastNAme); //Dots
+
+// console.log(neil['firstName']); //Brackets
+
+// const nameKey = 'Name';
+
+// console.log(neil['first' + nameKey]);
+// console.log(neil['last' + nameKey]);
+
+// console.log(neil['first' + nameKey], neil['last' + nameKey]);
+
+
+// // const interestedIn = prompt('What do you want to know about Neil? Choose between firstname, lastname, age, job, and friends.')
+
+// // if (neil[interestedIn]) {
+// //     console.log(neil[interestedIn]);
+// // } else {
+// //     console.log('Wrong request! Choose between firstname, lastname, age, job, and friends.');
+// // }
+
+neil.clacAge();
+neil.calcDL();
+
+console.log(neil.age);
+
+// Challenge
+// console.log(`${neil.firstName} has ${neil['friends'].length} friends, and his best friend is called ${neil['friends'][0]}`);
+
+// Another Challenge
+// "Neil is a 23-years old Full Stack Developer, and he has a driver's license"
+
+console.log(`${neil.firstName} is a ${neil.age}-years old ${neil.job}, and ${neil.resultForDL}`)

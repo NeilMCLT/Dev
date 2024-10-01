@@ -16,7 +16,7 @@ const checkWinner = function (avgDolphins, avgKoalas) {
 }
 
 checkWinner(scoreDolphins, scoreKoalas);
-*/
+
 
 //Challenge 2 
 
@@ -33,3 +33,5 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
 console.log(bills);
 console.log(tips);
 console.log(totals);
+
+*/
