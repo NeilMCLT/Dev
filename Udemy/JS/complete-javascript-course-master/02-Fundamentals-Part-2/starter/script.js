@@ -356,4 +356,59 @@ neil.calcDL();
 
 // console.log(`${neil.firstName} is a ${neil.age}-years old ${neil.job}, and ${neil.resultForDL}`);
 
+
+
+
+// LOOPS
+
+// For loop keeps running while the condition is true.
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repitition ${rep}`);
+}
 */
+const neilArray = [
+    'Neil',
+    'Miclat',
+    2024 - 2001,
+    'Developer',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+const types = [];
+
+for (let i = 0; i < neilArray.length; i++) {
+    console.log(neilArray[i]);
+
+    types.push(typeof neilArray[i]);
+
+}
+
+console.log(types);
+
+const birthYear = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < birthYear.length; i++) {
+    ages.push(2037 - birthYear[i])
+
+}
+console.log(ages);
+
+
+// Continue and break.
+console.log(`-- ONLY STRING --`);
+for (let i = 0; i < neilArray.length; i++) {
+
+    if (typeof neilArray[i] !== 'string') continue;
+    console.log(neilArray[i]);
+
+}
+
+console.log(`-- BREAL WITH NUMBER --`);
+for (let i = 0; i < neilArray.length; i++) {
+
+    if (typeof neilArray[i] === 'number') break;
+    console.log(neilArray[i]);
+
+}

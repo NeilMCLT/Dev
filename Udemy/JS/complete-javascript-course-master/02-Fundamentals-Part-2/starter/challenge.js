@@ -33,7 +33,7 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
 console.log(bills);
 console.log(tips);
 console.log(totals);
-*/
+
 
 
 // Challenge 3
@@ -90,3 +90,4 @@ console.log(`${mark.calcBMI() > john.calcBMI() ? `${mark.fullName}'s BMI (${mark
 //     console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})!`)
 // }
 
+*/
