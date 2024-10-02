@@ -269,7 +269,7 @@ if (friends.includes('Steven')) {
     console.log('You have a friend called Steven');
 }
 
-*/
+
 
 // Object
 
@@ -303,10 +303,18 @@ const neil = {
         }
 
         return this.resultForDL;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.clacAge()}-years old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
     }
 
 
 };
+
+neil.getSummary();
+
+console.log(neil.getSummary());
 
 
 
@@ -337,7 +345,8 @@ const neil = {
 neil.clacAge();
 neil.calcDL();
 
-console.log(neil.age);
+
+// console.log(neil.age);
 
 // Challenge
 // console.log(`${neil.firstName} has ${neil['friends'].length} friends, and his best friend is called ${neil['friends'][0]}`);
@@ -345,4 +354,6 @@ console.log(neil.age);
 // Another Challenge
 // "Neil is a 23-years old Full Stack Developer, and he has a driver's license"
 
-console.log(`${neil.firstName} is a ${neil.age}-years old ${neil.job}, and ${neil.resultForDL}`)
+// console.log(`${neil.firstName} is a ${neil.age}-years old ${neil.job}, and ${neil.resultForDL}`);
+
+*/
