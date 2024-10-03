@@ -435,7 +435,7 @@ for (let exercise = 1; exercise < 4; exercise++) {
     }
 }
 
-*/
+
 
 
 // let rep = 1;
@@ -453,3 +453,5 @@ while (dice !== 6) {
     if (dice === 6) console.log(`YOU GOT THE NUMBER 6`)
 
 }
+
+*/
