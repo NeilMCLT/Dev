@@ -413,7 +413,6 @@ for (let i = 0; i < neilArray.length; i++) {
 
 }
 
-*/
 
 const neilArray = [
     'Neil',
@@ -434,4 +433,23 @@ for (let exercise = 1; exercise < 4; exercise++) {
     for (let rep = 1; rep < 6; rep++) {
         console.log(`EXERCISE ${exercise}: Repition #${rep}!`);
     }
+}
+
+*/
+
+
+// let rep = 1;
+// while (rep <= 10) {
+//     console.log(`Repeat it! ${rep}`);
+//     rep++;
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}!`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log(`YOU GOT THE NUMBER 6`)
+
 }
