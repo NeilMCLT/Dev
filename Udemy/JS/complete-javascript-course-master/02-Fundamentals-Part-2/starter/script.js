@@ -365,7 +365,7 @@ neil.calcDL();
 for (let rep = 1; rep <= 10; rep++) {
     console.log(`Lifting weights repitition ${rep}`);
 }
-*/
+
 const neilArray = [
     'Neil',
     'Miclat',
@@ -411,4 +411,27 @@ for (let i = 0; i < neilArray.length; i++) {
     if (typeof neilArray[i] === 'number') break;
     console.log(neilArray[i]);
 
+}
+
+*/
+
+const neilArray = [
+    'Neil',
+    'Miclat',
+    2024 - 2001,
+    'Developer',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+for (let i = neilArray.length - 1; i >= 0; i--) {
+    console.log(neilArray[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`-- EXERCISE ${exercise} --`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`EXERCISE ${exercise}: Repition #${rep}!`);
+    }
 }
