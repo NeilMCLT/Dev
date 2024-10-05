@@ -436,8 +436,6 @@ for (let exercise = 1; exercise < 4; exercise++) {
 }
 
 
-
-
 // let rep = 1;
 // while (rep <= 10) {
 //     console.log(`Repeat it! ${rep}`);
