@@ -44,6 +44,80 @@ const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
 
 
+// DONE Destructure Objects
+
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+const { name: restaurantName, openingHours: hours, categories: tags } = restaurant;
+console.log(restaurantName, hours, tags);
+
+// Set default " = [] "
+const { menu = [], starterMenu: starters = [] } = restaurant
+console.log(menu, starters);
+
+// Mutating variables
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+({ a, b } = obj);
+console.log(a, b);
+
+// Nested Object
+const { fri: { open: o, close: c } } = openingHours
+console.log(o, c);
+
+// DONE The Spread Operator (...)
+
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+// Spread Operator "..."
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+console.log(...newArr); // Individual array
+
+const newMenu = [...restaurant.mainMenu, 'Pansit'];
+console.log(newMenu);
+
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// Join 2 arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu]
+console.log(menu);
+
+// Iterables: arrays, strings, maps, sets. NOT objects
+const str = 'Neil';
+const letters = [...str, '', 's']
+console.log(letters);
+console.log(...str);
+
+// Real world used
+function orderPasta(ing1, ing2, ing3) {
+  console.log(`Here is your delicious Pasta, with ${ing1}, ${ing2} and ${ing3}.`);
+};
+
+const ingredients = [
+  // prompt('What is the first ingredient?'),
+  // prompt('How about the second one?'),
+  // prompt('The third one?')
+]
+
+orderPasta(...ingredients);
+
+// Objects 
+const newRestaurant = { foundedIn: 1999, ...restaurant, founder: 'Neil pogi' }
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Neil Restobar';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
+*/
+
 
 // Data needed for a later exercise
 const flights =
@@ -70,48 +144,68 @@ const restaurant = {
       open: 0, // Open 24 hours
       close: 24,
     },
-  },
 
-  order: function (starterIndex, mainIndex) {
-
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
 
   },
 
-  orderDelivery: function ({ starterIndex, mainIndex, address, time }) {
-    console.log(`Order Reciept:
-      You have ordered ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}, 
-      at ${time} in ${address}`);
+
+  orderPizza: function (mainIng, ...otherIng) {
+    console.log(mainIng);
+    console.log(otherIng);
   },
+
+  // order: function (starterIndex, mainIndex) {
+
+  //   return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+
+  // },
+
+  // orderDelivery: function ({ starterIndex, mainIndex, address, time }) {
+  //   console.log(`Order Reciept:
+  //     You have ordered ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}, 
+  //     at ${time} in ${address}`);
+  // },
 };
 
-restaurant.orderDelivery({
-  starterIndex: 2,
-  mainIndex: 2,
-  time: '11:00am',
-  address: 'Pampanga',
-});
+restaurant.orderPizza('Mushrooms', 'Onion', 'Olives', 'Spinach');
 
-// TODO Destructure Objects
+// restaurant.orderDelivery({
+//   starterIndex: 2,
+//   mainIndex: 2,
+//   time: '11:00am',
+//   address: 'Pampanga',
+// });
 
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+// 1. Destructuring
 
-const { name: restaurantName, openingHours: hours, categories: tags } = restaurant;
-console.log(restaurantName, hours, tags);
+// Rest Pattern and Parameters
 
-// Set default " = [] "
-const { menu = [], starterMenu: starters = [] } = restaurant
-console.log(menu, starters);
+// Spread operator is always on the right side of the assignment
+const arr = [1, 2, ...[3, 4]];
+console.log(arr);
 
-// Mutating variables
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 14 };
-({ a, b } = obj);
-console.log(a, b);
+// Rest operator is always on the left side of the assignment
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
 
-// Nested Object
-const { fri: { open: o, close: c } } = openingHours
-console.log(o, c);
-*/
+const [pizza, risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu]
+console.log(pizza, risotto, otherFood);
+
+// Objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+// 2. Functions
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++)
+    sum += numbers[i];
+  console.log(sum);
+}
+
+
+add(2, 3);
+add(5, 3, 7, 2);
+add(8, 2, 5, 3, 2, 1, 4);
+
+
