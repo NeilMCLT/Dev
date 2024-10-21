@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 const books = [
     {
         title: 'Algorithms',
@@ -185,7 +185,7 @@ const books = [
 
 
 ];
-
+/*
 // Destructuring Arrays
 
 // 1.1
@@ -227,4 +227,33 @@ function printBookInfo({ title, author, year = 'year unknown' }) {
     console.log(`${title} by ${author}, ${year}`);
 }
 printBookInfo(books[0])
+
+
+// The Spread Operator
+
+// 3.1
+const bookAuthor = [...books[0].author, ...books[1].author];
+console.log(bookAuthor);
+// 3.2
+function spellword(word) {
+    console.log(...word);
+}
+spellword('JavaScript')
+
+
+// Rest Pattern and Parameters
+
+// 4.1
+const [mainKeyword, ...rest] = books[0].keywords;
+console.log(mainKeyword, rest);
+// 4.2
+const { publisher: bookPublisher, ...restOfTheBook } = books[1];
+console.log(bookPublisher, restOfTheBook);
+// 4.3
+function printBookAuthorsCount(title, ...authors) {
+    console.log(`The book "${title}" has ${authors.length} authors`);
+}
+printBookAuthorsCount('Algorithms', 'Robert Sedgewick', 'Kevin Wayne');
+
+// 
 */
