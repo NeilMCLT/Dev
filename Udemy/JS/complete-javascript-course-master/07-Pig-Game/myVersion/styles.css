@@ -5,12 +5,17 @@
 }
 
 body {
-  font-family: sans-serif;
+  background: radial-gradient(circle, #df5454, #792d2d);
+  font-family: "Nunito", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header {
   width: 100%;
-  background-color: brown;
+  background-color: transparent;
   position: fixed;
   top: 0;
   left: 0;
@@ -57,4 +62,47 @@ header {
 
 .nav-links a:hover {
   text-decoration: underline;
+}
+
+main {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section {
+  width: 30rem;
+  height: auto;
+  background-color: #ffcece;
+  margin: 0 1.5rem;
+}
+
+.player,
+.total-score-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  margin: 1.5rem;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.total-score-div {
+  background-color: #be4747;
+  width: 100%;
+}
+
+.total-score-label {
+  font-size: 3.8rem;
+}
+
+.score {
+  font-size: 8rem;
 }
