@@ -64,32 +64,48 @@ header {
   text-decoration: underline;
 }
 
-main {
-  position: relative;
+.container {
   width: 90%;
-  height: 100%;
-  display: flex;
-  overflow: hidden;
-  align-items: center;
-  justify-content: space-between;
-}
-
-section {
-  width: 30rem;
-  height: auto;
-  background-color: #ffcece;
-  margin: 0 1.5rem;
-}
-
-.player,
-.total-score-div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.btn-new-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+main {
+  position: relative;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+section {
+  padding: 1rem 0;
+  width: 30rem;
+  height: auto;
+  background-color: #ffcece;
+  border-radius: 1rem;
+}
+
+.player,
+.total-score-div,
+.current {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+  padding-top: 1rem;
 }
 
 .name {
-  margin: 1.5rem;
   font-size: 3rem;
   font-weight: 400;
 }
@@ -97,12 +113,34 @@ section {
 .total-score-div {
   background-color: #be4747;
   width: 100%;
+  color: white;
 }
 
 .total-score-label {
   font-size: 3.8rem;
 }
 
+.current-score,
+.score {
+  font-weight: 700;
+}
+
 .score {
   font-size: 8rem;
+}
+
+.current {
+  width: 60%;
+  background-color: #be4747;
+  border-radius: 1rem;
+  color: white;
+}
+
+.current-label {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.current-score {
+  font-size: 5.5rem;
 }
