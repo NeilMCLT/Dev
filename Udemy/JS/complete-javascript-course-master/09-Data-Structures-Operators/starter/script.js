@@ -120,8 +120,8 @@ console.log(restaurant.name);
 
 
 // Data needed for a later exercise
-const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+// const flights =
+//   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // Data needed for first part of the section
 const restaurant = {
@@ -154,20 +154,20 @@ const restaurant = {
     console.log(otherIng);
   },
 
-  // order: function (starterIndex, mainIndex) {
+  order: function (starterIndex, mainIndex) {
 
-  //   return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
 
-  // },
+  },
 
-  // orderDelivery: function ({ starterIndex, mainIndex, address, time }) {
-  //   console.log(`Order Reciept:
-  //     You have ordered ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}, 
-  //     at ${time} in ${address}`);
-  // },
+  orderDelivery: function ({ starterIndex, mainIndex, address, time }) {
+    console.log(`Order Reciept:
+    You have ordered ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}, 
+    at ${time} in ${address}`);
+  },
 };
 
-restaurant.orderPizza('Mushrooms', 'Onion', 'Olives', 'Spinach');
+// restaurant.orderPizza('Mushrooms', 'Onion', 'Olives', 'Spinach');
 
 // restaurant.orderDelivery({
 //   starterIndex: 2,
@@ -181,31 +181,65 @@ restaurant.orderPizza('Mushrooms', 'Onion', 'Olives', 'Spinach');
 // Rest Pattern and Parameters
 
 // Spread operator is always on the right side of the assignment
-const arr = [1, 2, ...[3, 4]];
-console.log(arr);
+// const arr = [1, 2, ...[3, 4]];
+// console.log(arr);
 
-// Rest operator is always on the left side of the assignment
-const [a, b, ...others] = [1, 2, 3, 4, 5];
-console.log(a, b, others);
+// // Rest operator is always on the left side of the assignment
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
 
-const [pizza, risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu]
-console.log(pizza, risotto, otherFood);
+// const [pizza, risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu]
+// console.log(pizza, risotto, otherFood);
 
-// Objects
-const { sat, ...weekdays } = restaurant.openingHours;
-console.log(weekdays);
+// // Objects
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(weekdays);
 
-// 2. Functions
-const add = function (...numbers) {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++)
-    sum += numbers[i];
-  console.log(sum);
+// // 2. Functions
+// const add = function (...numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++)
+//     sum += numbers[i];
+//   console.log(sum);
+// }
+
+
+// add(2, 3);
+// add(5, 3, 7, 2);
+// add(8, 2, 5, 3, 2, 1, 4);
+
+console.log(`------- OR -------`);
+
+// Use ANY data type, return ANY dat type, short-circuting
+console.log(3 || 'Jonas');
+console.log('' || 'Jonas');
+console.log(true || 0);
+console.log(undefined || null);
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+
+restaurant.numGuests = 0;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log(`------- AND -------`);
+
+console.log(0 && 'Jonas');
+console.log(7 && 'Jonas');
+
+console.log('Hello' && 23 && null && 'Jonas');
+
+// Practical example 
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach')
 }
 
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
-add(2, 3);
-add(5, 3, 7, 2);
-add(8, 2, 5, 3, 2, 1, 4);
-
-
+// 
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
